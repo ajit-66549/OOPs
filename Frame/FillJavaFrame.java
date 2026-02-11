@@ -3,6 +3,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import java.awt.event.ActionListener;
+
 public class FillJavaFrame extends JFrame {
     // components as a instance variables
     public JButton button;
@@ -25,6 +27,10 @@ public class FillJavaFrame extends JFrame {
         panel.add(button);
         panel.add(label);
         add(panel);
+
+        ActionListener listener = new ClickListener();
+        button.addActionListener(listener);
+
     }
 
 }
